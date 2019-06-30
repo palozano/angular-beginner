@@ -1,11 +1,22 @@
 
-let nombre = "Pedro";
 
-let hulk = {
-  nombre: "Hulk",
-  smash() {
-    setTimeout(() => console.log(this.nombre + " smash!!"), 1500);
-  }
+let avenger = {
+  nombre: "Steve",
+  clave: "Capitan America",
+  poder: "Droga",
 }
 
-hulk.smash();
+let { nombre, clave, poder } = avenger;
+
+
+console.log(nombre, clave, poder );
+
+
+
+
+
+let avengers:string[] = [ "Thor", "Steve", "Tony" ];
+
+let [ thor, capi, ironman ] = avengers;
+
+console.log( thor, capi, ironman );
