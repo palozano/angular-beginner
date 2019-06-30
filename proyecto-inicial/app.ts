@@ -1,10 +1,11 @@
 
-function saludar(nombre:string){
-  console.log("Hola " + nombre);
+
+
+let mensaje = "hola";
+
+if (true){
+  let mensaje = "adios";
+
 }
 
-var wolverine = {
-  nombre: "Logan"
-};
-
-saludar(wolverine.nombre);
+console.log(mensaje);
