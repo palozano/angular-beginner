@@ -1,28 +1,30 @@
 
 
-let prom1 = new Promise(function(resolve, reject) {
+interface Xmen {
+    nombre:string,
+    poder:string,
+}
 
-  setTimeout(() => {
-    console.log("Promesa terminada");
 
-    // Termina bien
-    //resolve();
+function enviarMision(xmen: Xmen) {
 
-    // Termina mal
-    reject();
+  console.log("Enviando a: " + xmen.nombre);
 
-  }, 1500)
-})
+}
 
-console.log("Paso 1");
 
-prom1.then(
-  function() {
-    console.log("Ejecutarme cuando acabe bien!")
-  },
-  function() {
-    console.log("Ejecutarme cuando acabe mal!")
-  }
-);
+function enviarCuartel(xmen: Xmen) {
 
-console.log("Paso 2");
+  console.log("Enviando al cuartel: " + xmen.nombre);
+
+}
+
+
+
+let wolverine:Xmen = {
+  nombre: "Wolverine",
+  poder: "Regeneracion",
+}
+
+enviarMision(wolverine);
+enviarCuartel(wolverine);
