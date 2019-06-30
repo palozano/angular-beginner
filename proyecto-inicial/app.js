@@ -1,13 +1,16 @@
 "use strict";
-function enviarMision(xmen) {
-    console.log("Enviando a: " + xmen.nombre);
-}
-function enviarCuartel(xmen) {
-    console.log("Enviando al cuartel: " + xmen.nombre);
-}
-var wolverine = {
-    nombre: "Wolverine",
-    poder: "Regeneracion",
-};
-enviarMision(wolverine);
-enviarCuartel(wolverine);
+var Avenger = /** @class */ (function () {
+    function Avenger(nombre, equipo, nombreReal) {
+        this.nombre = "Sin nombre";
+        this.equipo = undefined;
+        this.nombreReal = undefined;
+        this.puedePelar = false;
+        this.peleasGanadas = 0;
+        this.nombre = nombre;
+        this.equipo = equipo;
+        this.nombreReal = nombreReal;
+    }
+    return Avenger;
+}());
+var antman = new Avenger("Antman", "Capi", "Scott Lang");
+console.log(antman);
