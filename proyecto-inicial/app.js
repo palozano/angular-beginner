@@ -1,8 +1,20 @@
 "use strict";
-function saludar(nombre) {
-    console.log("Hola " + nombre);
-}
-var wolverine = {
-    nombre: "Logan"
+var nombre = "Peter";
+var numero = 123;
+var booleano = true;
+var hoy = new Date();
+hoy = new Date('2020-10-21');
+var cualquiera;
+cualquiera = nombre;
+cualquiera = numero;
+cualquiera = booleano;
+cualquiera = hoy;
+var spiderman = {
+    nombre: "Juan",
+    edad: 30,
 };
-saludar(wolverine.nombre);
+spiderman = {
+    nombre: "Juan",
+    edad: 30,
+    poder: "trepar paredes",
+};
