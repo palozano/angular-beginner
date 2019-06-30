@@ -1,17 +1,20 @@
-function getNombre(){
-  return "Fernando";
+
+
+function activar( quien:string,
+                  objeto:string="batseñal",
+                  momento?:string){
+
+    let mensaje:string;
+
+    if (momento ){
+      mensaje = `${ quien } activó la ${ objeto } en la ${ momento }`;
+    }else{
+    mensaje = `${ quien } activó la ${ objeto }`;
+    }
+
+    console.log(mensaje);
+
 }
 
-let nombre:string = "Juan"
-let apellido:string = "perez"
-let edad:number = 32;
 
-let texto = `Hola, ${ nombre } ${ apellido } (${ edad })`
-
-
-console.log(texto);
-
-
-let texto2:string = ` ${ getNombre() }`
-
-console.log(texto2);
+activar("Gordon", "batseñal", "tarde");

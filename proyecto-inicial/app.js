@@ -1,11 +1,13 @@
 "use strict";
-function getNombre() {
-    return "Fernando";
+function activar(quien, objeto, momento) {
+    if (objeto === void 0) { objeto = "batseñal"; }
+    var mensaje;
+    if (momento) {
+        mensaje = quien + " activ\u00F3 la " + objeto + " en la " + momento;
+    }
+    else {
+        mensaje = quien + " activ\u00F3 la " + objeto;
+    }
+    console.log(mensaje);
 }
-var nombre = "Juan";
-var apellido = "perez";
-var edad = 32;
-var texto = "Hola, " + nombre + " " + apellido + " (" + edad + ")";
-console.log(texto);
-var texto2 = " " + getNombre();
-console.log(texto2);
+activar("Gordon", "batseñal", "tarde");
