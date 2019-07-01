@@ -3,21 +3,21 @@ let nombre:string = "Ricardo Tapia";
 let edad:number = 23;
 
 const PERSONAJE : { nombre:string, edad:number } = {
-  nombre: nombre,
-  edad: edad
+    nombre: nombre,
+    edad: edad
 };
 
 
 // Cree una interfaz que sirva para validar el siguiente objeto
 
 interface Batman {
-  nombre:string;
-  artesMarciales: string[];
+    nombre:string;
+    artesMarciales: string[];
 }
 
 let batman:Batman = {
-  nombre: "Bruno Díaz",
-  artesMarciales: ["Karate","Aikido","Wing Chun","Jiu-Jitsu"]
+    nombre: "Bruno Díaz",
+    artesMarciales: ["Karate","Aikido","Wing Chun","Jiu-Jitsu"]
 }
 
 
@@ -36,15 +36,15 @@ let resultadoDoble = (a:number, b:number ) => (a+b)*2;
 //       PODER  = opcional
 //       ARMA   = por defecto = "arco"
 function getAvenger( nombre:string, poder?:string, arma:string="arco" ){
-  let mensaje:string;
+    let mensaje:string;
 
-  if( poder ){
-     // mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
-     mensaje = `${ nombre } tiene el poder de: ${ poder } y un arma: ${ arma }`;
-  }else{
-     // mensaje = nombre + " tiene un " + poder
-     mensaje = `${ nombre } tiene un poder ${ poder }`;
-  }
+    if( poder ){
+        // mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
+        mensaje = `${ nombre } tiene el poder de: ${ poder } y un arma: ${ arma }`;
+    }else{
+        // mensaje = nombre + " tiene un " + poder
+        mensaje = `${ nombre } tiene un poder ${ poder }`;
+    }
 };
 
 
@@ -58,11 +58,11 @@ function getAvenger( nombre:string, poder?:string, arma:string="arco" ){
 
 
 class Rectagulo {
-  base:number;
-  altura:number;
+    base:number;
+    altura:number;
 
-  calcularArea():number {
-    return this.base*this.altura;
-  }
+    calcularArea():number {
+        return this.base*this.altura;
+    }
 
 }
