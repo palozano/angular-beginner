@@ -26,7 +26,7 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 + Class constructor
 + Modules
 + Decorators
-+ `tsc -w`
++ Watch the project with `tsc -w`
 
 
 ## First application
