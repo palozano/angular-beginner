@@ -1,0 +1,20 @@
+<h1 class="animated fadeIn">{{ author.nombre | uppercase }}, <small>{{ author.aparicion | date:'y' }}</small></h1>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="author.img" class="img-fluid" [alt]="author.nombre">
+        <br><br>
+
+        <a [routerLink]="['/authors']" class="btn btn-outline-danger btn-block">Go back</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{ author.nombre }}</h3>
+        <hr>
+        <p>{{ author.bio }}</p>
+        <div class="img-fluid">
+            <img class="img-logo" *ngIf="author.casa == 'DC'" src="assets/img/dc-icon.png" alt="DC">
+            <img class="img-logo"  *ngIf="author.casa == 'Marvel'" src="assets/img/marvel-icon.png" alt="Marvel">
+        </div>
+    </div>
+</div>

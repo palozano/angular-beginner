@@ -1,0 +1,14 @@
+<div class="card animated fadeIn fast">
+    <img [src]="author.img" class="card-img-top" [alt]="author.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{ author.nombre }}</h5>
+        <p class="card-text">{{ author.bio }}</p>
+        <p class="card-text"><small class="text-muted">{{ author.aparicion }}</small></p>
+
+        <button (click)="seeAuthor()"
+            type="button" class="btn btn-outline-primary btn-block">
+            More
+        </button>
+
+    </div>
+</div>

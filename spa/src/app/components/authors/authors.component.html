@@ -1,1 +1,12 @@
-<p>authors works!</p>
+<h1>Authors, <small>classic and new</small></h1>
+
+
+<div class="card-columns">
+
+<app-author-card (authorSelected)="seeAuthor( $event )"
+                 [author]="foo"
+                 [index]="i"
+                 *ngFor="let foo of authors; let i = index">
+</app-author-card>
+
+</div>

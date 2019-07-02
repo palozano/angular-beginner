@@ -1,0 +1,32 @@
+<h1>Searched: <small>{{ termino }}</small></h1>
+
+<div class="row animated fadeIn fast" *ngIf="authors.length==0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            There are no results with the words: {{ termino }}
+        </div>
+    </div>
+</div>
+
+
+<div class="card-columns">
+
+    <app-author-card [author]="foo"
+                     [index]="foo.idx"
+                     *ngFor="let foo of authors">
+    </app-author-card>
+
+    <!-- <div class="card animated fadeIn fast" *ngFor="let author of authors; let i = index">
+        <img [src]="author.img" class="card-img-top" [alt]="author.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{ author.nombre }}</h5>
+            <p class="card-text">{{ author.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ author.aparicion }}</small></p>
+
+            <button (click)="seeAuthor(i)"  type="button" class="btn btn-outline-primary btn-block">
+                More
+            </button>
+        </div>
+    </div> -->
+
+</div>

@@ -1,0 +1,23 @@
+<h1>Authors, <small>classic and new</small></h1>
+
+
+<div class="card-columns">
+
+    <div class="card animated fadeIn fast" *ngFor="let author of authors; let i = index">
+        <img [src]="author.img" class="card-img-top" [alt]="author.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{ author.nombre }}</h5>
+            <p class="card-text">{{ author.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ author.aparicion }}</small></p>
+
+            <button (click)="seeAuthor(i)"  type="button" class="btn btn-outline-primary btn-block">
+                More
+            </button>
+            <!-- <a [routerLink]="['/author', i]" class="btn btn-outline-primary btn-block">
+                More (link)...
+            </a> -->
+
+        </div>
+    </div>
+
+</div>
