@@ -1,5 +1,8 @@
 # Introductory course: Angular (beginner)
 
+*(Course from Udemy: Angular from zero to expert)*
+
+
 ## Required installations
 
 1. NodeJS
@@ -32,7 +35,7 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 - Run local server with `ng serve -o`
 - Use Bootstrap
 - Create components using the CLI with `ng g(enerate) c(omponent) <folder>/<name>`
-- \*ngIf \*ngFor 
+- Commands: *\*ngIf \*ngFor* 
 
 
 
