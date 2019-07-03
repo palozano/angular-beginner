@@ -63,18 +63,20 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 		+ *package.json*: Config file for the packages
 		+ *angular.json*: Config file for Angular
 
-2. Styling
+2. **Styling**
+
 	Bootstrap (or other styling) can be called/included as a CDN (online) or install it within the app. You have to link it in the *index.html*.
 
 	Another option is to install it with the CLI `npm install bootstrap --save`. It will be saved in *node_modules/* folder. Do the same thing with *popper.js* and *jquery*. Link them in the *angular.json* file, under the *"styles"* section.
 
-3. Navbar
+3. **Navbar**
+
 	Create a new component, use the bootstrap styling in the *.html*. Link it in the *app.component.ts* file.
 
-4. Routing
+4. **Routing**
+
 	Inside the *app.routes.ts*, create a `const` variable that will store the routes to the components. The components have to be imported; and the constant, exported. In the *app.module.ts* import the constant; and in *app.component.html*, you have to call the *<router-outlet>*.
 
 	The links need to be called as: `[routerLink]="['home','1']"`. The first [] is to tell Angular to handle the link, the array is the way to pass the routes. The item containing the other item with links, can have the `routerLinkActive` to be highlighted.
 
 5. Services
-	
