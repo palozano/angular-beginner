@@ -108,7 +108,7 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 	Literally, `|`, can transform the data the preceed with a certain command (toUpperCase, toDate, etc).
 
 
-8. Searcher
+8. **Searcher**
 
 	Is possible to get the data from a search box or a click by appending `#searchText` in the html tag, and passing it to a function by using `(keyup.enter)="searchAuthor(searchText.value)"`.
 
@@ -134,6 +134,14 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
         return authorsArr;
     }
 	```
+	
+	to obtain all the data that corresponds with the data you looked for (this example works with the prejoect, it should be adapted).
+
+	You can later send the returned data to a new page (component) where you display the results.
 
 
+9. **Moving data from a *parent* component to *child* one.**
 
+	First, import the module `Import`, and decortate a variable with `@Input` before. In the .html tag use square brackets to handle it with Angular: `[heroe]=foo`, where *heroe* is the received variable and *foo* the local variable.
+
+	
