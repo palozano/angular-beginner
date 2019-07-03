@@ -72,7 +72,7 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 
 3. **Navbar**
 
-	Create a new component, use the bootstrap styling in the *.html*. Link it in the *app.component.ts* file.
+	Create a new component, use the bootstrap styling in its *.html*. Link it in the *app.component.ts* file.
 
 4. **Routing**
 
@@ -80,6 +80,60 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 
 	The links need to be called as: `[routerLink]="['home','1']"`. The first [] is to tell Angular to handle the link, the array is the way to pass the routes. The item containing the other item with links, can have the `routerLinkActive` to be highlighted.
 
-5. **Services**
+	---
 
+	It is possible to route also using "parameters in the links". The path should be like: `{ path: 'item/:id', component: ItemComponent },` in the *routes.ts*. In the *.html*, you have to create the index by invoking JS code: `let i = index`, where `i` is the local variable and `index` is the variable name in the *.ts* file. And in the link, use `[routerLink]="['/item', i]"`, where `i` is the local variable mentioned previously in the *.html*. It is also possible to create a function using a router to navigate, and call it when triggering an event (such as (click) or similar).
+
+	---
+
+	It is also possible to send parameters (by subscribing to params) in the URLs.
+
+
+5. **Services**
 	
+	They are a re-usable for the application. They create CRUD petitions (Create, Read, Update, Delete), give information and make the data persistent. Basically, they allow communication between components.
+
+	Create it in the *app/* (maybe in a separate folder) folder and import it in the *app.module.ts*.
+
+	You can create here variables that store data and use them with different components, by importing the service and calling a function that returns the data.
+
+
+6. **Using \*ngFor & \*ngIf**
+
+	By including `*ngFor="let item of list` inside a html tag, we can execute javascript code through angular and copy (or whatever you want to do) a html/css card, or looping through data, do searches, etc.
+
+
+7. **Pipes**
+	
+	Literally, `|`, can transform the data the preceed with a certain command (toUpperCase, toDate, etc).
+
+
+8. Searcher
+
+	Is possible to get the data from a search box or a click by appending `#searchText` in the html tag, and passing it to a function by using `(keyup.enter)="searchAuthor(searchText.value)"`.
+
+	In the service, you should do:
+	```typescript
+
+	searchAuthors( termino:string ):Author[] {
+        let authorsArr:Author[] = [];
+        termino = termino.toLowerCase();
+
+        // for( let author of this.authors ){
+        for( let i=0; i<this.authors.length; i++){
+
+            let author = this.authors[i];
+            let nombre = author.nombre.toLowerCase();
+
+            if( nombre.indexOf( termino ) >= 0 ){
+                author.idx = i;
+                authorsArr.push( author );
+            }
+        }
+
+        return authorsArr;
+    }
+	```
+
+
+
