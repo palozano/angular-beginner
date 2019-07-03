@@ -40,7 +40,8 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 
 ## Single-page application
 
-1. Structure
+1. **Structure**
+
 	In the app folder, you can find several folders:
 		+ *e2e/*: End-To-End test
 		+ *node_module/s*: Modules that can be imported (not all of them go to the production app)
@@ -79,4 +80,6 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 
 	The links need to be called as: `[routerLink]="['home','1']"`. The first [] is to tell Angular to handle the link, the array is the way to pass the routes. The item containing the other item with links, can have the `routerLinkActive` to be highlighted.
 
-5. Services
+5. **Services**
+
+	
