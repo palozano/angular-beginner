@@ -74,4 +74,7 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
 4. Routing
 	Inside the *app.routes.ts*, create a `const` variable that will store the routes to the components. The components have to be imported; and the constant, exported. In the *app.module.ts* import the constant; and in *app.component.html*, you have to call the *<router-outlet>*.
 
-	The links need to be called as: `[routerLink]="['home','1']"`. The first [] is to tell Angular to handle the link, the array  
+	The links need to be called as: `[routerLink]="['home','1']"`. The first [] is to tell Angular to handle the link, the array is the way to pass the routes. The item containing the other item with links, can have the `routerLinkActive` to be highlighted.
+
+5. Services
+	
