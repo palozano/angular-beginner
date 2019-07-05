@@ -134,14 +134,21 @@ Some code editor (Atom, Sublime, VSCode...), with the pluggins to help.
         return authorsArr;
     }
 	```
-	
+
 	to obtain all the data that corresponds with the data you looked for (this example works with the prejoect, it should be adapted).
 
 	You can later send the returned data to a new page (component) where you display the results.
 
 
-9. **Moving data from a *parent* component to *child* one.**
+9. **Moving data from a *parent* component to a *child* one**
 
-	First, import the module `Import`, and decortate a variable with `@Input` before. In the .html tag use square brackets to handle it with Angular: `[heroe]=foo`, where *heroe* is the received variable and *foo* the local variable.
+	First, import the module `Import`, and decorate a variable with `@Input` in front, the one that you will "share". In the .html tag use square brackets to handle it with Angular: `[heroe]=foo`, where *heroe* is the received variable and *foo* the local variable.
+
+
+10. **Moving data from a *child* component to a *parent* one**
+
+	(In the .ts file) First, import the module `Output` and `EventEmitter`. Decorate the variable you want to share with `@Output` and let it be of the class `EventEmitter<number>` (or whatever applies). In the constructor, initialize it as a *= new EventEmitter*. In a function, make the *Event*, make it emit the variable you want.
+
+	In the html, where you put the component inside a div or similar, make the component listen to an event (such as a *click*, but you use the name of the event declared in the previous step) and that event triggers a function that can reuse the variable/info sent from the child `(authorSelected)="seeAuthor( $event )"`.
 
 	
